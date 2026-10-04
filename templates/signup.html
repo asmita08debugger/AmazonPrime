@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Prime Video</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="auth-page">
+
+    <div class="auth-container">
+
+        <div class="logo auth-logo">prime video</div>
+
+        <div class="auth-box">
+
+            <h1>Create account</h1>
+
+            <form action="/signup" method="POST">
+
+    <label>Your name</label>
+    <input type="text" name="name" placeholder="Enter your name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Enter your email" required>
+
+    <label>Password</label>
+    <input type="password" name="password" placeholder="At least 6 characters" required>
+
+    <label>Re-enter password</label>
+    <input type="password" name="confirmPassword" placeholder="Re-enter your password" required>
+
+    <button class="auth-button" type="submit">Create account</button>
+
+</form>
+
+            <p class="auth-help">
+                By creating an account, you agree to the Prime Video Terms and Conditions.
+            </p>
+
+            <div class="divider">
+                <span>Already have an account?</span>
+            </div>
+
+            <a href="login.html" class="create-account">
+                Sign in
+            </a>
+
+        </div>
+
+        <a href="index.html" class="back-home">← Back to Home</a>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
